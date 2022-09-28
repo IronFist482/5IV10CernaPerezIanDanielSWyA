@@ -29,7 +29,7 @@ var cesar =cesar || (function(){
                     //descifra para atrás
                     pos-=desp;
                     //movimiento
-                    pos+=(pos>0)?1:0;
+                    pos+=(pos<0)?1:0;
                 }
                 return abc[pos];
             }
@@ -53,7 +53,7 @@ var cesar =cesar || (function(){
             return proceso(txt, desp, true);
         },
         decode : function(txt,desp){
-            return proceso(txt,desp,false);
+            return proceso(txt, desp, false);
         }
         
     };
@@ -62,8 +62,8 @@ var cesar =cesar || (function(){
 })();
 
 function cifrar(){
-    document.getElementById("resultado").innerHTML =cesar.encode(document.getElementById("cadena").ariaValue,3)
+    document.getElementById("resultado").innerHTML =cesar.encode(document.getElementById("cadena").value, 3)
 }
 function descifrar(){
-    document.getElementById("resultado").innerHTML =cesar.decode(document.getElementById("cadena").ariaValue,3)
+    document.getElementById("resultado").innerHTML =cesar.decode(document.getElementById("cadena").value, 3)
 }
