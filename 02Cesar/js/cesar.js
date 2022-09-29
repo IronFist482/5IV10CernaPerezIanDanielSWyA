@@ -25,11 +25,13 @@ var cesar =cesar || (function(){
                     pos+=desp;
                     //definir cómo se va a mover
                     pos-=(pos>=l)?1:0;
+                    console.log("pos");
                 }else{
                     //descifra para atrás
                     pos-=desp;
                     //movimiento
                     pos+=(pos<0)?1:0;
+                    console.log("pos");
                 }
                 return abc[pos];
             }

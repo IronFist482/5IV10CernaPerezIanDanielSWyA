@@ -34,6 +34,7 @@ public class DES {
             //no hay archivos cargados
             mensajeAyuda();
             System.exit(1);
+        }
             /*Lo primero que tenemos que hacer es cargar una instancia
             del proveedor del tipo de cifrado, para eso es la parte de las librerias
             */
@@ -104,15 +105,48 @@ public class DES {
             
             in.close();
             out.close();
-        }
+            
+            //vamos a descifrar
+            System.out.println("3.- Descifrar con DES el archivo:"+args[0]+".cifrado" + " , vamos a ver el resultado en el archivo: " + args[0] +".descifrado");
+            
+            //empezamos con el modo de descifrar
+            
+            cifrado.init(Cipher.DECRYPT_MODE, clave);
+            
+            //Buffer para la entrada y salida de los bits correspondientes
+            
+            byte[] bufferPlano;
+            
+            in = new FileInputStream(args[0]+".cifrado");
+            out = new FileOutputStream(args[0]+".descifrado");
+            
+            //Damos lectura de cada elemento
+            
+            bytesleidos = in.read(buffer,0,1000);
+            //Mientras no esté al final del archivo, que continue
+            while(bytesleidos !=-1){
+                //pasamos el texto plano a cifrado
+                bufferPlano=cifrado.update(buffer, 0, bytesleidos);
+                //genermaos la salida
+                out.write(bufferPlano);
+                bytesleidos=in.read(buffer,0,1000);
+            }
+            //vamos a reunir los bloques
+            bufferPlano=cifrado.doFinal();
+            
+            in.close();
+            out.close();
+        
     }
 
     private static void mensajeAyuda() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Ejemplo de un cifrado DES para archivos .txt");
+        System.out.println("Cuidado con la llave, solo debe ser de 8 caracteres");
+        System.out.println("Compruebe que si cargo el fichero o archivo para cifrar, sino no se puede");
+        System.out.println("Ñam Ñam :3");
     }
 
-    private static void mostrarBytes(byte[] encoded) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+    private static void mostrarBytes(byte[] buffer) {
+        System.out.write(buffer,0,buffer.length);
+    } 
 }

@@ -5,7 +5,15 @@
 }
 
 html, body{
-    background-color: #54be77;
+    background-color: #459fdb;
+    /*
+    #3498db
+    #3445db
+    #7734db
+    #cb34db
+    #db3498
+    #db3445
+    */
 }
 
 .container{
@@ -38,7 +46,9 @@ nav, footer, section {
 }
 
 .titulo{
+    font-size: 5rem;
     text-align: center;
+    font-family: "Trebuchet MS";
 }
 ol,li{
     align-content: center;

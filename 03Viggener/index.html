@@ -1,13 +1,14 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Ejemplo de Cifrado Cesar</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Viggenere</title>
+</head>
+<body>
     <header><h1>Cifrado Cesar</h1></header>
     <nav>
       <b>DESCRIPCIÓN</b><br /><br />
@@ -18,7 +19,8 @@
     <br />
     <div class="container">
       <div class="cuadros">
-        <textarea name="cadena" id="cadena" cols="23" rows="5"> </textarea>
+        <textarea id="mess" cols="23" rows="5"> </textarea>
+        <input type="text" id="llave">
         <br />
         <p>
           <input type="button" value="Cifrar" onclick="cifrar()" />
@@ -26,10 +28,11 @@
         </p>
       </div>
       <div class="cuadros">
-        <div id="resultado"></div>
+        <div id="rs"></div>
       </div>
     </div>
     <footer><b><a href="../index.html">Salir</a></b></footer>
-    <script src="js/cesar.js"></script>
+    <script src="js/viggener.js"></script>
   </body>
+<script src="http://code.jquery.com/jquery-1.11.0-beta2.js"></script>
 </html>

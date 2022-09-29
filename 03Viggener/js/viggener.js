@@ -127,7 +127,7 @@ $(document).ready(function(){
 });
 
 //funcion de cambio o de cifrado
-function cifrado(posm,posk){
+function cifrar(posm,posk){
     //tengo que aplicar la formula
     let y = (posm + posk)%27;
     return y;
@@ -161,7 +161,7 @@ function revision(mess, desp){
 
     //evaluar la expresión
     if(!expresion.test(mess)){
-        alert("eL texto que ingresó no ha sido aceptado, ingrese solo minusculas y evite números y simbolos");
+        alert("El texto que ingresó no ha sido aceptado, ingrese solo minusculas y evite números y simbolos");
         aceptado =false;
     }
     if(!expresion.test(desp)){
