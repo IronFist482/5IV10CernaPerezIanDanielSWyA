@@ -1,3 +1,5 @@
+
+
 //vamos a ocupar parte de cesar
 
 const abc = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ','o','p','q','r','s','t','u','v','w','x','y','z'];
@@ -38,7 +40,6 @@ $(document).ready(function(){
                 //emparejo conforme a la posición del caracter obteniendo el número de dicha posición
                 keyCompleta += key.charAt((i%Number(key.length)));
             }
-            alert(keyCompleta);
 
             //tengo que volver a recorrer el mensaje para obtener caracteres y posiciones
             for (var i = 0; i < mess.length; i++) {
@@ -58,12 +59,12 @@ $(document).ready(function(){
             }
 
             //imprimir el resultado
-            document.getElementById('rs').value=newMess;
+            
         }else{
             //no se cumple
             alert("No sirve, llevele :p");
         }
-
+        alert(newMess)
     });
 
     //descifrar
@@ -97,7 +98,6 @@ $(document).ready(function(){
                 //emparejo conforme a la posición del caracter obteniendo el número de dicha posición
                 keyCompleta += key.charAt((i%Number(key.length)));
             }
-            alert(keyCompleta);
 
             //tengo que volver a recorrer el mensaje para obtener caracteres y posiciones
             for (var i = 0; i < mess.length; i++) {
@@ -115,19 +115,17 @@ $(document).ready(function(){
 
                 newMess +=abc[newValores];
             }
-
-            //imprimir el resultado
-            document.getElementById('rs').value=newMess;
         }else{
             //no se cumple
             alert("No sirve, llevele :p");
         }
+        alert(newMess)
 
     });
 });
 
 //funcion de cambio o de cifrado
-function cifrar(posm,posk){
+function cifrar(posm, posk){
     //tengo que aplicar la formula
     let y = (posm + posk)%27;
     return y;
@@ -170,7 +168,7 @@ function revision(mess, desp){
     }
     if(desp.lenght>mess.length){
         alert("La clave no puede ser mayor que el mensaje");
-        aceptado=false;
+        aceptado =false;
     }
     return aceptado;
 }

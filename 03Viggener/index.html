@@ -1,38 +1,45 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css  " />
     <title>Ejemplo Viggenere</title>
-</head>
-<body>
-    <header><h1>Cifrado Cesar</h1></header>
+  </head>
+  <body>
+    <header><h1>Cifrado Viggener</h1></header>
     <nav>
       <b>DESCRIPCIÓN</b><br /><br />
-      El cifrado cesar va a recorrer 3 posiciones a la derecha para cifrar y 3
-      posiciones a la izquierda para descifrar
+      Es un cifrado basado en diferentes series de caracteres o letras del
+      cifrado César formando estos caracteres una tabla, llamada tabla de
+      Vigenère, que se usa como clave. El cifrado de Vigenère es un cifrado por
+      sustitución simple polialfabético.
       <br />
     </nav>
     <br />
     <div class="container">
-      <div class="cuadros">
-        <textarea id="mess" cols="23" rows="5"> </textarea>
-        <input type="text" id="llave">
-        <br />
-        <p>
-          <input type="button" value="Cifrar" onclick="cifrar()" />
-          <input type="button" value="Descifrar" onclick="descifrar()" />
-        </p>
-      </div>
-      <div class="cuadros">
-        <div id="rs"></div>
-      </div>
+        <div class="cuadros">
+          <h3>Texto</h3>
+          <textarea id="mess" cols="23" rows="5"></textarea>
+          <br /><br />
+          <p>
+            <input type="button" value="Cifrar" id="ci" />
+            <input type="button" value="Descifrar" id="de" />
+          </p>
+        </div>
+        <div class="cuadros">
+          <h3>Llave</h3>
+          <input type="text" id="llave" />
+          <h3>Resultado</h3>
+          <br>
+          <label id="rs"></label>
+        </div>
     </div>
-    <footer><b><a href="../index.html">Salir</a></b></footer>
-    <script src="js/viggener.js"></script>
+    <footer>
+      <b><a href="../index.html">Salir</a></b>
+    </footer>
+    <script src="http://code.jquery.com/jquery-1.11.0-beta2.js"></script>
   </body>
-<script src="http://code.jquery.com/jquery-1.11.0-beta2.js"></script>
+  <script src="js/viggener.js"></script>
 </html>
