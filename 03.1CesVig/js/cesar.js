@@ -40,7 +40,7 @@ var cesar =cesar || (function(){
                 if(action){
                     //cifrar hacia adelante
                     
-                    pos+=desp;
+                    pos+=desp-2;
 
                     
                     //definir cómo se va a mover
