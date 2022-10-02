@@ -6,7 +6,7 @@
 }
 
 html, body{
-    background-color: #83e7b5;
+    background-color: #abe7c9;
 }
 
 header{
@@ -49,9 +49,7 @@ ol,li{
     margin: 1rem;
     padding: 1rem;
     height: 70%;
-    background-color: #71c77fc9;
+    background-color: #c9ffd3c9;
     border: 2px solid #000000;
     border-radius: 50px;
-    display: flex;
-    flex-direction: column;
 }

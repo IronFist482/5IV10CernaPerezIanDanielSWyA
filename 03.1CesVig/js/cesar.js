@@ -1,4 +1,5 @@
-/*Vamos a crear una funcion recursiva que se encarge de llamar a una función como un objeto en caso de que no se pueda ejecutar*/
+
+
 
 var cesar =cesar || (function(){
     var proceso= function(txt,desp,action){
@@ -25,13 +26,13 @@ var cesar =cesar || (function(){
                     pos+=desp;
                     //definir cómo se va a mover
                     pos-=(pos>=l)?1:0;
-                    console.log("pos");
+                    console.log(pos);
                 }else{
                     //descifra para atrás
                     pos-=desp;
                     //movimiento
                     pos+=(pos<0)?1:0;
-                    console.log("pos");
+                    console.log(pos);
                 }
                 return abc[pos];
             }
@@ -64,8 +65,25 @@ var cesar =cesar || (function(){
 })();
 
 function cifrar(){
-    document.getElementById("resultado").innerHTML =cesar.encode(document.getElementById("cadena").value, 3)
+    var desplazamientos=document.getElementById("desp").value;
+    desplazamientos=parseInt(desplazamientos);
+
+    if(desplazamientos<=26&&desplazamientos>0){
+        document.getElementById("resultado").innerHTML =cesar.encode(document.getElementById("cadena").value, desplazamientos);
+    }else{
+        alert("No pongas deplazamientos mayores a 26 ni menores a 1");
+        alert("miau miau :3");
+    }
 }
 function descifrar(){
-    document.getElementById("resultado").innerHTML =cesar.decode(document.getElementById("cadena").value, 3)
+    var desplazamientos=document.getElementById("desp").value;
+    desplazamientos=parseInt(desplazamientos);
+
+    if(desplazamientos<=26&&desplazamientos>0){
+        document.getElementById("resultado").innerHTML =cesar.decode(document.getElementById("cadena").value, desplazamientos);
+    }else{
+        alert("No pongas deplazamientos mayores a 26 ni menores a 1");
+        alert("miau miau :3");
+    }
+    
 }

@@ -6,11 +6,13 @@
 }
 
 html, body{
-    background-color: #3CDF58;
+    background-color: #d6d5a0;
+    padding-top: 1rem;
 }
 
 header{
-    padding-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 .container{
     border: 2px solid black;
@@ -18,9 +20,10 @@ header{
     margin-top: 1rem;
     margin-left: 18rem;
     margin-right: 18rem;
-    background-color: #e47cb0;
+    background-color: #d4d229;
     text-align: center;
-    height: 16rem;
+    padding: 1%;
+    
 }
 
 nav{
@@ -32,30 +35,17 @@ nav{
     padding: 1rem;
 }
 
-aside{
-    border: 2px solid #a80abd;
-    margin: 1rem;
-    border-radius: 10px;
-    padding: 1rem;
-}
-
-section, footer, article{
-    border: 2px solid #a80abd;
+footer{
+    border: 2px solid #000000;
     margin-top: 2rem;
     margin-left: 18rem;
     margin-right: 18rem;
     border-radius: 10px;
     padding: 1rem;
+    
 }
 
-article, aside{
-    width: 30%;
-    display: inline-block;
-    height: 90%;
-    background-color: #e4bebe;
-}
-
-nav, footer, section {
+nav, footer{
     background-color: darkgrey;
 }
 
@@ -64,16 +54,14 @@ nav, footer, section {
     text-align: center;
     font-family: "Trebuchet MS";
 }
-ol,li{
-    align-content: center;
-    font-size: 30px;
-}
+
 .cuadros{
-    width: 30%;
-    display: inline-table;
-    background-color: #fcf1f1;
+    width: 42%;
+    background-color: #dddc92;
     border: 2px solid #000000;
-    margin: 1rem;
-    border-radius: 10px;
+    border-radius: 45px;
+    margin: 1%;
     padding: 1rem;
+    display: inline-block;
+    
 }
