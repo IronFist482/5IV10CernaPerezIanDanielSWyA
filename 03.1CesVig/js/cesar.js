@@ -3,27 +3,46 @@
 
 var cesar =cesar || (function(){
     var proceso= function(txt,desp,action){
+        
         var replace=(function(){
 
         //Primero necesito una matriz del abecedario
         
         var abc = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
         var l = abc.length;
-
+        var desplazamientos=document.getElementById("desp").value;
+        desplazamientos=parseInt(desplazamientos);
+        
         //Necesitamos una función que pueda obtener la posición que va a venir por parte de la clave privada o desplazamiento
         return function(c){
+
+            
+
+
             //Necesitamos saber la posición
             var i=abc.indexOf(c.toLowerCase());
+            
 
             //Necesitamos saber donde estamos dentro de la matriz abc y como la vamos a recorrer para el momento del cifrado
             if(i!=-1){
                 //primero obtenemos la posición para el desplazamiento
-                var pos=i;
+                
+                var pos;
+                if(l<(desplazamientos+i)){
+                    pos=(desplazamientos+i)-28;
+                }
+                else{
+                    pos=i;
+                }
+                
 
                 //necesito saber la operación a realizar
                 if(action){
                     //cifrar hacia adelante
+                    
                     pos+=desp;
+
+                    
                     //definir cómo se va a mover
                     pos-=(pos>=l)?1:0;
                     console.log(pos);
