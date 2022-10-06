@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css  " />
+    <title>Algoritmo DES</title>
+  </head>
+  <body>
+    <header><h1>Cifrado DES</h1></header>
+    <nav>
+      <b>DESCRIPCIÓN</b><br /><br />
+      Es un algoritmo de cifrado por bloques de 64 bits de tamaño. Emplea una
+      clave de 56 bits durante la ejecución (se eliminan 8 bits de paridad del
+      bloque de 64).
+      <br />
+    </nav>
+    <br />
+    <div class="container">
+      <div class="cuadros">
+        <h3>Archivo con Texto</h3>
+        <p><i>(solo txt pls)</i></p>
+        <br /><br>
+        <input type="file" id="mess" accept=".txt">
+        <br /><br /><br>
+        <p>
+          <input type="button" value="Cifrar" id="ci" onclick="leerArchivo()" />
+          <input type="button" value="Descifrar" id="de" />
+        </p>
+      </div>
+      <div class="cuadros">
+        <h3>Llave</h3>
+        <br />
+        <p>
+          <input type="text" id="llave" placeholder="Aquí va la llave" />
+        </p>
+        <br />
+        <h3>Resultado</h3>
+        <br />
+        <label id="rs"></label>
+      </div>
+      <input type="submit" value="Guardar Archivo" onclick="guardarArchivo()">
+    </div>
+    <footer>
+      <b><a href="../index.html">Salir</a></b>
+    </footer>
+  </body>
+  <script src="js/des.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</html>
