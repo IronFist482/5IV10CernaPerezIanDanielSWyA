@@ -53,7 +53,6 @@ var cesar =cesar || (function(){
                 }
                 return abc[pos];
             }
-            return c;
         };
     })();
     //tenemos que saber que el texto este acorde al abc
