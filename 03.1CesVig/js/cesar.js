@@ -20,7 +20,7 @@ var cesar =cesar || (function(){
             console.log(desp);
 
             //Necesitamos saber donde estamos dentro de la matriz abc y como la vamos a recorrer para el momento del cifrado
-            if(i=!double){
+            if(i=!-1){
                 //primero obtenemos la posición para el desplazamiento
                 var pos=i;
 
