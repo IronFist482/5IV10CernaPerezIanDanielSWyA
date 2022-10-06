@@ -18,11 +18,11 @@ var cesar =cesar || (function(){
             
             console.log(i);
             console.log(desp);
-
+            var pos=i;
             //Necesitamos saber donde estamos dentro de la matriz abc y como la vamos a recorrer para el momento del cifrado
-            if(i=!-1){
+            if(true){
                 //primero obtenemos la posición para el desplazamiento
-                var pos=i;
+                
 
                 //necesito saber la operación a realizar
                 if(action){
