@@ -71,7 +71,7 @@ function revision(texto, password) {
     alert("Primero ingrese texto");
     aceptado = false;
   }
-  if (password < 8) {
+  if (password < 8 || password >8) {
     alert("La clave ingresada es incorrecta, tiene que ser de 8 caracteres");
     aceptado = false;
   }
