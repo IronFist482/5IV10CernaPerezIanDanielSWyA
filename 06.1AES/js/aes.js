@@ -38,7 +38,7 @@ archivo.addEventListener("change", () => {
       let tipoCifrado = document.querySelector('input[name="tipo"]:checked').value
       //para evitar el algoritmo debemos crear una función que se encarge de revisar las condiciones del mismo
       
-      if (revision(texto, password)) {
+      if (revision(texto, password,tipoCifrado)) {
         texto = descifrar(texto, password);
 
         //imprimir el resultado
@@ -70,16 +70,19 @@ function revision(texto, password, tipoCifrado) {
   if(tipoCifrado=="128"){
     if(password.length!=16){
       aceptado = false;
+      alert("Pon una clave de 16 dígitos");
     }
   }
   if(tipoCifrado=="192"){
     if(password.length!=24){
       aceptado = false;
+      alert("Pon una clave de 24 dígitos");
     }
   }
   if(tipoCifrado=="256"){
     if(password.length!=32){
       aceptado = false;
+      alert("Pon una clave de 32 dígitos");
     }
   }
 
@@ -92,13 +95,13 @@ function revision(texto, password, tipoCifrado) {
 function cifrar(texto, password) {
   var cifrado = "";
   console.log(texto)
-  cifrado = CryptoJS.DES.encrypt(texto, password);
+  cifrado = CryptoJS.AES.encrypt(texto, password);
   return cifrado;
 }
 function descifrar(texto, password) {
   console.log(texto)
   var descifrado = "";
-  descifrado = CryptoJS.DES.decrypt(texto, password);
+  descifrado = CryptoJS.AES.decrypt(texto, password);
   console.log(descifrado)
   var textoDescifrado = descifrado.toString(CryptoJS.enc.Utf8);
   return textoDescifrado;
